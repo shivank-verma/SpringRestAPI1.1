@@ -1,0 +1,5 @@
+org\shivank\princeton\bean\User.class
+org\shivank\princeton\Dao\UserDao.class
+org\shivank\princeton\Dao\UserMapper.class
+org\shivank\princeton\Dao\UserDaoImpl.class
+org\shivank\princeton\Controller\UserController.class
