@@ -1,0 +1,51 @@
+package org.shivankprinceton.service;
+
+import org.shivankprinceton.Dao.UserDao;
+
+import java.util.List;
+ 
+
+
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Repository;
+import org.shivankprinceton.Model.User;
+
+@Repository
+public class IUserService implements UserDao {
+	
+	@Autowired
+	private MongoTemplate mongoTemplate;
+	
+	
+public static final String COLLECTION_NAME = "user";
+	
+	public void addUser(User user) {
+		if (!mongoTemplate.collectionExists(User.class)) {
+			mongoTemplate.createCollection(User.class);
+		}		
+		
+		mongoTemplate.insert(user, COLLECTION_NAME);
+	}
+	
+	public List<User> listUser() {
+		return mongoTemplate.findAll(User.class, COLLECTION_NAME);
+	}
+	
+	public void deleteUser(User user) {
+		
+		Query querydel=new Query();
+		querydel.addCriteria(Criteria.where("user_id").is(user.getUser_id()));
+		mongoTemplate.findAndRemove(querydel, User.class, COLLECTION_NAME);
+	}
+	
+	public void updateUser(User user) {
+		mongoTemplate.insert(user, COLLECTION_NAME);		
+	}
+
+}

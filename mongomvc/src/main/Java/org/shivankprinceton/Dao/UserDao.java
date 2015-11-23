@@ -1,0 +1,13 @@
+package org.shivankprinceton.Dao;
+
+import java.util.List;
+
+import org.shivankprinceton.Model.User;
+
+public interface UserDao {
+
+	public void addUser(User user);
+	public List<User> listUser();
+	public void deleteUser(User user);
+	public void updateUser(User user);
+}

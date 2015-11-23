@@ -52,11 +52,14 @@ public class UserController {
 	   throws Exception {
 
 	  User user = new User();
+	  
 	  String name = request.getParameter("Name");
 	  String email = request.getParameter("email");
 	  String comment = request.getParameter("comment");
 	  String phn_no = request.getParameter("phn_no");
+	  String user_id = request.getParameter("user_id");
 	  
+	  user.setUser_id(user_id);
 	  user.setEmail(email);
 	  user.setName(name);
 	  user.setComment(comment);

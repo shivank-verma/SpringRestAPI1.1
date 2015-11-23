@@ -1,0 +1,9 @@
+INDEX VERSION 1.126
+C:\Users\shivank\Documents\GitHub\SpringRestAPI1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3352544936.index
+\HelloSpringWithMongoDB\src\main\java
+C:\Users\shivank\Documents\GitHub\SpringRestAPI1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\87925763.index
+\HelloSpringWithMongoDB\src\main\java
+C:\Users\shivank\Documents\GitHub\SpringRestAPI1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2503779827.index
+\shivankmongo\src\main\resources
+C:\Users\shivank\Documents\GitHub\SpringRestAPI1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1222997929.index
+\mongomvc\src\main\resources
